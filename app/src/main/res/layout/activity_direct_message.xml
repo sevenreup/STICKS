@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DirectMessage">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar_layout">
+        <include
+            android:id="@+id/dm_toolbar"
+            layout="@layout/appbar_layout"
+            app:layout_scrollFlags="scroll|enterAlways" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recy"
+        android:layout_marginTop="?attr/actionBarSize"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="50dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/add_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/add" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/edit_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toEndOf="@id/add_btn"
+                    android:padding="4dp"
+                    app:cardBackgroundColor="@color/colorPrimaryDark"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:contentPadding="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/emoji_btn"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            app:srcCompat="@drawable/emoji" />
+
+                        <EditText
+                            android:id="@+id/edit_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_toEndOf="@id/emoji_btn"
+                            android:ems="10"
+                            android:hint="Type Message"
+                            android:inputType="textMultiLine" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/send"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignEnd="@id/edit_holder"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/send" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/add_container"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_below="@id/container"
+                android:visibility="gone"
+                android:background="?attr/selectableItemBackground"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

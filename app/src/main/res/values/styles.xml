@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="cus_textinput" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:colorControlNormal"></item>
+        <item name="android:colorControlActivated"></item>
+        <item name="android:colorControlHighlight"></item>
+    </style>
+
+</resources>
